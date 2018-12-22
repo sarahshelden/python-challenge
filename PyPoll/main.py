@@ -1,27 +1,7 @@
-## Challenge 2: PyPoll
-# 
-# # Notes to self: 
-#       The file has a header.
-#       We need to calculate the following: 
-#           1.  The total number of votes cast --> Simply report the sum of all the votes. 
-#           2.	A complete list of candidates who received votes --> need a find the unqiue names from row[2]
-#           3.	The percentage of votes each candidate won:
-#               --> For each of these unique candidates need to find out the total number of votes for a particular candidate 
-#               --> and divide it by the total number of votes cast (from Step 1). Multiply by 100. 
-#           4.	The total number of votes each candidate won --> Collect from previous step
-#           5.	The winner of the election based on popular vote --> Among the unique names who has the maximum vote counts is the WINNER!
-#       Like the previous code, we need to use git to submit this assignment!!!
-# Resources used: https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/. 
-#               For the writing the text also use the same loop.
-# Resources used: https://www.geeksforgeeks.org/python-get-unique-values-list/
-# Note on set:  Using set() property of Python, we can easily check for the unique values. 
-#               Insert the values of the list in a set. 
-#               Set only stores a value once even if it is inserted more then once. 
-#               After inserting all the values in the set by list_set=set(list1)
-#               Convert this set to a list to print it.
 
 
-# Objective 1: Import modules os and csv. Importing numpy in order to use the unique function
+
+# Objective 1: Import modules os and csv.
 import os
 import csv
 
@@ -61,11 +41,7 @@ with open(PyPollcsv, newline="") as csvfile:
     winning_vote_count = max(vote_count)
     winner = unique_candidate[vote_count.index(winning_vote_count)]
     
-# Note to TA: I have tried several ways to get the max of the votecount list and retrieve the name as Winner. But unsucessful. 
-# Hence I am leaving that part out of this code. But Khan is the winner, I know!!!!
-# Jake suggested: votecount = votecount["percentage"].sort_values()
-# Print to terminal
-# Output perhaps needs to be rounded to 3 decimal points. Leaving that formatting out for now) 
+
  
 print("-------------------------")
 print("Election Results")   
